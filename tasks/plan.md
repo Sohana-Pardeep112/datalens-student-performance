@@ -22,31 +22,36 @@ DataLens is a generic CSV analytics web app built with React (Vite, Tailwind, Ty
 
 ### Phase 2: Core Data Pipeline
 - [ ] Task 3: CSV Upload API
-- [ ] Task 4: Frontend Upload Component
-- [ ] Task 5: Executive Summary Backend
-- [ ] Task 6: Frontend Executive Summary View
+- [ ] Task 4: Data Profiling Backend
+- [ ] Task 5: Frontend Upload Component
+- [ ] Task 6: Data Profiling Frontend
+- [ ] Task 7: Executive Summary Backend
+- [ ] Task 8: Frontend Executive Summary View
 
 ### Checkpoint: Core Data Pipeline
 - [ ] User can upload the primary development dataset.
 - [ ] Full CSV data is persisted in SQLite.
+- [ ] Data profile (stats, types, nulls) is generated and displayed.
 - [ ] Executive summary is generated and displayed on the UI.
 
 ### Phase 3: Chat & Tool Calling
-- [ ] Task 7: LLM Tool Definitions
-- [ ] Task 8: Chat API Endpoint
-- [ ] Task 9: Frontend Chat Interface
+- [ ] Task 9: LLM Tool Definitions
+- [ ] Task 10: Chat API Endpoint
+- [ ] Task 11: Frontend Chat Interface
 
 ### Checkpoint: Chat & Tool Calling
 - [ ] User can ask questions about the uploaded data.
 - [ ] LLM successfully calls tools and returns natural language answers.
 
-### Phase 4: Visualizations
-- [ ] Task 10: Chart Tool Definition
-- [ ] Task 11: Frontend Chart Rendering
+### Phase 4: Visualizations & Polish
+- [ ] Task 12: Chart Tool Definition
+- [ ] Task 13: Frontend Chart Rendering
+- [ ] Task 14: Global Filters
 
 ### Checkpoint: Complete
 - [ ] All acceptance criteria met.
 - [ ] 4-6 Recharts visualizations are successfully generated dynamically.
+- [ ] Dashboard contains global filters that adjust charts dynamically.
 - [ ] Ready for review.
 
 ## Risks and Mitigations
