@@ -1,10 +1,10 @@
 ## Task 1: Initialize Project Skeletons
 **Description:** Set up the basic React/Vite frontend and FastAPI backend folder structure with their respective dependencies.
 **Acceptance criteria:**
-- [ ] Vite frontend runs on port 5173 without errors.
-- [ ] FastAPI backend runs on port 8000 and returns a health check response.
+- [x] Vite frontend runs on port 5173 without errors.
+- [x] FastAPI backend runs on port 8000 and returns a health check response.
 **Verification:**
-- [ ] Manual check: Open `http://localhost:5173` and `http://localhost:8000/health`.
+- [x] Manual check: Open `http://localhost:5173` and `http://localhost:8000/health`.
 **Dependencies:** None
 **Files likely touched:**
 - `frontend/package.json`
