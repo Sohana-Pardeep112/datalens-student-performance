@@ -40,13 +40,13 @@
 **Estimated scope:** M
 
 ## Task 4: Data Profiling Backend
-**Description:** Detect column types, count nulls, and compute basic stats immediately after CSV upload.
+**Description:** Detect column types, count nulls, and compute basic stats after CSV upload.
 **Acceptance criteria:**
-- [ ] Calculate min, max, mean for numeric columns.
-- [ ] Calculate unique counts for categorical columns.
-- [ ] Return JSON profile data from the upload endpoint.
+- [x] Calculate min, max, mean for numeric columns.
+- [x] Calculate unique counts for categorical columns.
+- [x] Return JSON profile data from a GET endpoint at `/api/datasets/{dataset_id}/profile`.
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_profiling.py`
+- [x] Tests pass: `pytest tests/test_profiling.py`
 **Dependencies:** Task 3
 **Files likely touched:**
 - `backend/services/profiling.py`
