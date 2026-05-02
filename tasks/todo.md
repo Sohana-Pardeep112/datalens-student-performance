@@ -87,10 +87,10 @@
 ## Task 7: Executive Summary Backend
 **Description:** Create a service to gather dataset statistics via Pandas and call Claude to generate an executive summary.
 **Acceptance criteria:**
-- [ ] Backend extracts basic stats and sends to Claude.
-- [ ] Claude returns a business-analyst narrative summary.
+- [x] Backend extracts basic stats and sends to Claude.
+- [x] Claude returns a business-analyst narrative summary.
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_summary.py` (with mocked Anthropic API)
+- [x] Tests pass: `pytest tests/test_summary.py` (with mocked Anthropic API)
 **Dependencies:** Task 4
 **Files likely touched:**
 - `backend/core/llm.py`
