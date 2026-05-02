@@ -29,10 +29,10 @@
 ## Task 3: CSV Upload API
 **Description:** Create a POST endpoint to upload a CSV, use Pandas to parse it, create a dynamic SQLite table, and save metadata.
 **Acceptance criteria:**
-- [ ] POST `/upload` endpoint accepts a CSV file.
-- [ ] Backend creates a dynamic SQLite table and inserts full CSV rows.
+- [x] POST `/upload` endpoint accepts a CSV file.
+- [x] Backend creates a dynamic SQLite table and inserts full CSV rows.
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_upload.py`
+- [x] Tests pass: `pytest tests/test_upload.py`
 **Dependencies:** Task 2
 **Files likely touched:**
 - `backend/api/upload.py`
