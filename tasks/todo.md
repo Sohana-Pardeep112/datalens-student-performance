@@ -56,10 +56,13 @@
 ## Task 5: Frontend Upload Component
 **Description:** Build a React component using Tailwind CSS to allow users to select and upload a CSV file.
 **Acceptance criteria:**
-- [ ] File input allows selecting `.csv` files.
-- [ ] UI shows loading state during upload and captures the response.
+- [x] File input allows selecting `.csv` files.
+- [x] UI shows loading state during upload and captures the response.
+- [x] Display a success message with the dataset name when complete.
+- [x] Store the returned dataset_id in state so other components can use it.
 **Verification:**
-- [ ] Manual check: Upload `student-mat.csv` and verify it succeeds.
+- [x] Vitest test written.
+- [x] Manual check: Upload `student-mat.csv` and verify it succeeds.
 **Dependencies:** Task 3
 **Files likely touched:**
 - `frontend/src/components/Upload.tsx`

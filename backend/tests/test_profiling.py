@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
-from backend.main import app
-from backend.core.database import Base, engine
+from main import app
+from core.database import Base, engine
 import io
 
 client = TestClient(app)

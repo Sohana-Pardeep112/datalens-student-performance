@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy.orm import Session
-from backend.models.dataset import Dataset
-from backend.core.database import engine
+from models.dataset import Dataset
+from core.database import engine
 
 def generate_profile(dataset_id: int, db: Session):
     dataset = db.query(Dataset).filter(Dataset.id == dataset_id).first()

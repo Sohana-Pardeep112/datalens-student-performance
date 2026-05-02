@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.api import upload, datasets
+from api import upload, datasets
 
 app = FastAPI(title="DataLens API")
 

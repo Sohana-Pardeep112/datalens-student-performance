@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
-from backend.main import app
-from backend.core.database import Base, engine, SessionLocal
-from backend.models.dataset import Dataset
+from main import app
+from core.database import Base, engine, SessionLocal
+from models.dataset import Dataset
 import io
 
 client = TestClient(app)
