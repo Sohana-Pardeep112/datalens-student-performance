@@ -71,11 +71,13 @@
 **Estimated scope:** M
 
 ## Task 6: Data Profiling Frontend
-**Description:** Display the data profile returned from the backend after upload.
+**Description:** Fetch profile from `/api/datasets/{dataset_id}/profile` and display it in a table on the dashboard.
 **Acceptance criteria:**
-- [ ] Table or cards displaying column names, types, null counts, and stats.
+- [x] UI component fetches profile data using dataset ID.
+- [x] Renders a table showing column names, types, null counts, and stats.
 **Verification:**
-- [ ] Manual check: Upload CSV and see profiling data appear.
+- [x] Vitest test written.
+- [x] Manual check: See profile table render after upload.
 **Dependencies:** Task 4, Task 5
 **Files likely touched:**
 - `frontend/src/components/DataProfile.tsx`

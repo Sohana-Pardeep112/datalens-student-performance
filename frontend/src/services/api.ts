@@ -14,3 +14,12 @@ export const uploadCsv = async (file: File) => {
 
   return response.json();
 };
+
+export const fetchProfile = async (datasetId: number) => {
+  const response = await fetch(`/api/datasets/${datasetId}/profile`);
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => null);
+    throw new Error(errorData?.detail || 'Failed to fetch profile');
+  }
+  return response.json();
+};

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Upload } from './components/Upload'
+import { DataProfile } from './components/DataProfile'
 
 function App() {
   const [datasetId, setDatasetId] = useState<number | null>(null);
@@ -16,12 +17,15 @@ function App() {
           <p className="mt-2 text-lg text-gray-600">Generic CSV Analytics Platform</p>
         </header>
 
-        <Upload onUploadSuccess={handleUploadSuccess} />
-
-        {datasetId && (
-          <div className="text-center mt-8 p-4 bg-blue-50 rounded-lg border border-blue-100">
-            <p className="text-blue-800 font-medium">Active Dataset ID: {datasetId}</p>
-            <p className="text-sm text-blue-600 mt-1">Ready for profiling and analysis.</p>
+        {!datasetId ? (
+          <Upload onUploadSuccess={handleUploadSuccess} />
+        ) : (
+          <div className="space-y-6">
+            <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md flex justify-between items-center shadow-sm">
+              <span className="font-medium">Dataset successfully uploaded and active!</span>
+              <button onClick={() => setDatasetId(null)} className="text-sm font-semibold underline hover:text-green-900 transition">Upload another dataset</button>
+            </div>
+            <DataProfile datasetId={datasetId} />
           </div>
         )}
       </div>
