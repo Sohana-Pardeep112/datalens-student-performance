@@ -16,10 +16,10 @@
 ## Task 2: Database Setup & Models
 **Description:** Configure SQLite database connection using SQLAlchemy and create models for storing dataset metadata.
 **Acceptance criteria:**
-- [ ] SQLite database file is generated.
-- [ ] Dataset metadata table (id, filename, created_at, table_name) can be created via SQLAlchemy.
+- [x] SQLite database file is generated.
+- [x] Dataset metadata table (id, filename, created_at, table_name) can be created via SQLAlchemy.
 **Verification:**
-- [ ] Tests pass: `pytest tests/test_db.py`
+- [x] Tests pass: `pytest tests/test_db.py`
 **Dependencies:** Task 1
 **Files likely touched:**
 - `backend/core/database.py`
