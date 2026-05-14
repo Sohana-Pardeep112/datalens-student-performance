@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Upload } from './components/Upload'
 import { DataProfile } from './components/DataProfile'
+import { ExecutiveSummary } from './components/ExecutiveSummary'
 
 function App() {
   const [datasetId, setDatasetId] = useState<number | null>(null);
@@ -26,6 +27,7 @@ function App() {
               <button onClick={() => setDatasetId(null)} className="text-sm font-semibold underline hover:text-green-900 transition">Upload another dataset</button>
             </div>
             <DataProfile datasetId={datasetId} />
+            <ExecutiveSummary datasetId={datasetId} />
           </div>
         )}
       </div>

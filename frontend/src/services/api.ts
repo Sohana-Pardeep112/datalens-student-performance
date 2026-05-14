@@ -23,3 +23,12 @@ export const fetchProfile = async (datasetId: number) => {
   }
   return response.json();
 };
+
+export const fetchSummary = async (datasetId: number) => {
+  const response = await fetch(`/api/datasets/${datasetId}/summary`);
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => null);
+    throw new Error(errorData?.detail || 'Failed to fetch summary');
+  }
+  return response.json();
+};
