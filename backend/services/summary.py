@@ -1,8 +1,11 @@
 import os
 import json
-from anthropic import Anthropic
+from dotenv import load_dotenv
+from groq import Groq
 from sqlalchemy.orm import Session
 from services.profiling import generate_profile
+
+load_dotenv()
 
 def generate_executive_summary(dataset_id: int, db: Session) -> str:
     # 1. Get stats
@@ -11,9 +14,9 @@ def generate_executive_summary(dataset_id: int, db: Session) -> str:
     # 2. Format as a readable string for the prompt
     stats_json = json.dumps(profile, indent=2)
     
-    # 3. Call Claude
-    # The Anthropic client automatically picks up ANTHROPIC_API_KEY from the environment
-    client = Anthropic() 
+    # 3. Call Groq
+    # The Groq client automatically picks up GROQ_API_KEY from the environment
+    client = Groq() 
     
     prompt = f"""
 You are an expert business analyst and data scientist.
@@ -25,12 +28,12 @@ Highlight key characteristics, missing data issues, and interesting distribution
 Do not use more than 3 paragraphs. Output strictly the summary narrative.
 """
     
-    response = client.messages.create(
-        model="claude-3-haiku-20240307",
-        max_tokens=500,
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
         messages=[
             {"role": "user", "content": prompt}
-        ]
+        ],
+        max_tokens=500
     )
     
-    return response.content[0].text
+    return response.choices[0].message.content
